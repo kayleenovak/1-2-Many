@@ -1,16 +1,16 @@
 <template>
   <section class='word-container'>
-    <h1 class='word-name'>umpire</h1>
-    <p class='word-definition'>a person who impartially decides or resolves a dispute or controversy</p>
-    <h2 class='synonyms-heading'>Synonyms for <span class='word'>umpire</span></h2>
+    <h1 class='word-name'>{{word[0].meta.id}}</h1>
+    <p class='word-definition'>{{word[0].shortdef[0]}}</p>
+    <h2 class='synonyms-heading'>Synonyms for <span class='word'>{{word[0].meta.id}}</span></h2>
     <section class='synonym-container'>
       <Synonym />
       <Synonym />
       <Synonym />
       <Synonym />
     </section>
-    <h2 class='example-heading'>Example sentences for <span class='word'>umpire</span></h2>
-    <p class='example-sentence'>usually acts as {it}umpire{/it} in the all-too-frequent squabbles between the two other roommates</p>
+    <h2 class='example-heading'>Example sentences for <span class='word'>{{word[0].meta.id}}</span></h2>
+    <p class='example-sentence'>{{word[0].def[0].sseq[0][0][1].dt[1][1][0].t}}</p>
   </section>
 </template>
 
@@ -21,7 +21,8 @@ export default {
   name: 'Word',
   components: {
     Synonym
-  }
+  },
+  props: ['word']
 }
 </script>
 

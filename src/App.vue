@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Search />
-    <Word />
+    <Word v-bind:word='word' />
   </div>
 </template>
 
