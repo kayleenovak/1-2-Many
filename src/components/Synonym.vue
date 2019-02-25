@@ -1,0 +1,23 @@
+<template>
+  <section class='synonym'>
+    <h4>synonym</h4>
+  </section>
+</template>
+
+<script>
+
+export default {
+  name: 'Synonym'
+}
+
+</script>
+
+<style scoped>
+  .synonym {
+    background-color: #D1F5FF;
+    height: 40px;
+    border: 4px solid #004E72;
+    border-radius: 10px;
+    margin: 20px;
+  }
+</style>
