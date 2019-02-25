@@ -26,7 +26,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 450px 1fr;
   height: 100%;
 }
 
