@@ -1,6 +1,6 @@
 <template>
   <section id='search-container'>
-    <h1>1-2-Many</h1>
+    <h1 class='app-name'>1-2-Many</h1>
     <form>
       <input class='search-input' placeholder='Find a synonym for...' />
       <button class='search-btn'>Search</i></button>
@@ -17,6 +17,12 @@ export default {
 </script>
 
 <style scoped>
+  .app-name {
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: white;
+  }
+
   #search-container {
     background: #004E72;
   }
@@ -46,7 +52,7 @@ export default {
     width: 100px;			
     transition: all .1s linear;
     font-size: 15px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   .search-btn:after{
