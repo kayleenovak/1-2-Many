@@ -8,6 +8,7 @@
 <script>
 import Search from './components/Search.vue'
 import Word from './components/Word.vue'
+import { APIKey } from './APIKey.js'
 
 export default {
   name: 'app',
@@ -22,7 +23,7 @@ export default {
   },
   methods: {
     getWord: function() {
-      fetch('https://www.dictionaryapi.com/api/v3/references/thesaurus/json/umpire?key=d2b1b340-d60a-4dd8-a962-057fe37f2dd8')
+      fetch(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/horse?key=${APIKey}`)
         .then(response => response.json())
         .then(wordInfo => this.word = wordInfo)      
     }
