@@ -18,6 +18,9 @@ export default {
     height: 40px;
     border: 4px solid #004E72;
     border-radius: 10px;
-    margin: 20px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>

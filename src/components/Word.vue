@@ -3,10 +3,12 @@
     <h1 class='word-name'>umpire</h1>
     <p class='word-definition'>a person who impartially decides or resolves a dispute or controversy</p>
     <h2 class='synonyms-heading'>Synonyms for <span class='word'>umpire</span></h2>
-    <Synonym />
-    <Synonym />
-    <Synonym />
-    <Synonym />
+    <section class='synonym-container'>
+      <Synonym />
+      <Synonym />
+      <Synonym />
+      <Synonym />
+    </section>
     <h2 class='example-heading'>Example sentences for <span class='word'>umpire</span></h2>
     <p class='example-sentence'>usually acts as {it}umpire{/it} in the all-too-frequent squabbles between the two other roommates</p>
   </section>
@@ -44,6 +46,11 @@ export default {
   .synonyms-heading,
   .example-heading {
     font-size: 30px;
+  }
+
+  .synonym-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .word {
