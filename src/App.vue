@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <Search />
     <Word />
   </div>
 </template>
 
 <script>
+import Search from './components/Search.vue'
 import Word from './components/Word.vue'
 
 export default {
