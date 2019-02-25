@@ -11,7 +11,10 @@
 <script>
 
 export default {
-  name: 'Search'
+  name: 'Search',
+  // created() {
+  //   this.$emit('created')
+  // }
 }
 
 </script>

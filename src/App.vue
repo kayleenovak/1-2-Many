@@ -14,6 +14,21 @@ export default {
   components: {
     Word,
     Search
+  },
+  data: () => {
+    return {
+      word: []
+    }
+  },
+  methods: {
+    getWord: function() {
+      fetch('https://www.dictionaryapi.com/api/v3/references/thesaurus/json/umpire?key=d2b1b340-d60a-4dd8-a962-057fe37f2dd8')
+        .then(response => response.json())
+        .then(wordInfo => this.word = wordInfo)      
+    }
+  },
+  beforeMount() {
+    this.getWord()
   }
 }
 </script>
