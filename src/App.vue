@@ -1,37 +1,41 @@
 <template>
   <div id="app">
-    <Search />
-    <Word v-bind:word='word' />
+    <Search v-on:getWord='getWord'/>
+    <Word v-if='word.length' v-bind:word='word' />
+    <h2 v-else>Please search for a word</h2>
   </div>
 </template>
 
 <script>
-import Search from './components/Search.vue'
-import Word from './components/Word.vue'
-import { APIKey } from './APIKey.js'
+  import Search from './components/Search.vue'
+  import Word from './components/Word.vue'
+  import { APIKey } from './APIKey.js'
 
-export default {
-  name: 'app',
-  components: {
-    Word,
-    Search
-  },
-  data: () => {
-    return {
-      word: []
+  export default {
+    name: 'app',
+    components: {
+      Word,
+      Search
+    },
+    data: () => {
+      return {
+        word: []
+      }
+    },
+    methods: {
+      getWord: function(word) {
+        console.log(word)
+        if(word) {
+          fetch(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${word}?key=${APIKey}`)
+            .then(response => response.json())
+            .then(wordInfo => this.word = wordInfo)      
+        }
+      }
+    },
+    beforeMount() {
+      this.getWord()
     }
-  },
-  methods: {
-    getWord: function() {
-      fetch(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/horse?key=${APIKey}`)
-        .then(response => response.json())
-        .then(wordInfo => this.word = wordInfo)      
-    }
-  },
-  beforeMount() {
-    this.getWord()
   }
-}
 </script>
 
 <style>

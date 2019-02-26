@@ -10,20 +10,20 @@
       <Synonym />
     </section>
     <h2 class='example-heading'>Example sentences for <span class='word'>{{word[0].meta.id}}</span></h2>
-    <p class='example-sentence'>{{word[0].def[0].sseq[0][0][1].dt[1][1][0].t}}</p>
+    <p class='example-sentence'>{{word[0].def[0].sseq[0][0][1].dt[1][1][0].t.split('{it}').join('').split('{/it}').join()}}</p>
   </section>
 </template>
 
 <script>
-import Synonym from './Synonym.vue'
+  import Synonym from './Synonym.vue'
 
-export default {
-  name: 'Word',
-  components: {
-    Synonym
-  },
-  props: ['word']
-}
+  export default {
+    name: 'Word',
+    components: {
+      Synonym
+    },
+    props: ['word'],
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

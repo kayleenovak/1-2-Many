@@ -1,9 +1,9 @@
 <template>
   <section id='search-container'>
-    <h1 class='app-name'>1-2-Many</h1>
+    <h1 class='app-name'>1 - 2 - Many</h1>
     <form>
       <input class='search-input' placeholder='Find a synonym for...' />
-      <button class='search-btn'>Search</i></button>
+      <button class='search-btn' v-on:click="updateWord">Search</button>
     </form>
   </section>
 </template>
@@ -12,9 +12,12 @@
 
 export default {
   name: 'Search',
-  // created() {
-  //   this.$emit('created')
-  // }
+  methods: {
+    updateWord: function(e) {
+      e.preventDefault();
+      this.$emit('getWord', e.target.previousSibling.value)
+    }
+  }
 }
 
 </script>
