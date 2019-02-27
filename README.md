@@ -23,5 +23,5 @@ A thesaurus application that consumes the Merriam-Webster Thesaurus API. 1-2-Man
 
 ## Screenshot
 
-![image](https://user-images.githubusercontent.com/39439089/53465065-b0fd0780-3a09-11e9-89d5-3ea89395f173.png)
+![image](https://user-images.githubusercontent.com/39439089/53466578-cffe9800-3a0f-11e9-98e0-0ac439c95098.png)
 
