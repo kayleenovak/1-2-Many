@@ -24,6 +24,7 @@ export default {
     },
     updateWord: function(e) {
       this.word = e.target.value
+      e.target.value = ''
     }
   }
 }
@@ -49,6 +50,7 @@ export default {
     border: none;
     padding: 0 0 0 10px;
     font-size: 20px;
+    outline: none;
     background-image: linear-gradient(to bottom, rgba(255,252,252,1) 0%,rgba(229,235,238,1) 81%,rgba(215,222,227,1) 100%,rgba(245,247,249,1) 100%,rgba(215,222,227,1) 101%);
   }
 
@@ -67,6 +69,7 @@ export default {
     transition: all .1s linear;
     font-size: 15px;
     margin-top: 15px;
+    outline: none;
   }
 
   .search-btn:after{
