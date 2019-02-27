@@ -35,7 +35,7 @@
   }
 
   .word-name {
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     margin-bottom: 7px;
   }
@@ -43,6 +43,7 @@
   .word-definition {
     margin-top: 0;
     color: gray;
+    font-size: 18px;
   }
 
   .synonyms-heading,
@@ -59,5 +60,15 @@
   .word {
     color: gray;
     text-decoration: underline;
+  }
+
+  .example-heading {
+    margin-bottom: 10px;
+  }
+
+  .example-sentence {
+    font-size: 18px;
+    color: gray;
+    margin-top: 0;
   }
 </style>

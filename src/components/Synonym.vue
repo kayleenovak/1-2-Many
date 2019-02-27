@@ -39,4 +39,8 @@ export default {
     border: 4px solid #D1F5FF;
     color: white;
   }
+
+  h4 {
+    font-size: 20px;
+  }
 </style>
