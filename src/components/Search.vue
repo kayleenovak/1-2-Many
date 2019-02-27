@@ -63,7 +63,7 @@ export default {
     border-radius: 25px;
     box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
     height: 40px;
-    margin: 0 30px 30px 0;
+    margin: 15px 0 30px 0;
     position: relative;
     width: 100px;			
     transition: all .1s linear;
