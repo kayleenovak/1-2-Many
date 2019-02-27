@@ -1,7 +1,9 @@
 # 1-2-many
 
 ## About
-A thesaurus application that consumes the Merriam-Webster Thesaurus API. 1-2-Many was built as a code challenge for Turing School of Sofware and Design's module 4 curriculum. Users can get a list of synonyms for a word that they chooe to search. 1-2-Many was my time writing an application in Vue.js. 
+A thesaurus application that consumes the Merriam-Webster Thesaurus API. 1-2-Many was built as a code challenge for Turing School of Sofware and Design's module 4 curriculum. Users can get a list of synonyms for a word that they chooe to search. 1-2-Many was my time writing an application in Vue.js.
+
+Deployed application: [1-2-Many](https://one-2-many.herokuapp.com/)
 
 ## Install and Setup
 
