@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Search v-on:getWord='getWord'/>
-    <Word v-if='word.length' v-bind:word='word' />
+    <Word v-if='wordDetails.length' v-bind:wordDetails='wordDetails' />
     <h2 v-else>Please search for a word</h2>
   </div>
 </template>
@@ -19,16 +19,15 @@
     },
     data: () => {
       return {
-        word: []
+        wordDetails: []
       }
     },
     methods: {
       getWord: function(word) {
-        console.log(word)
         if(word) {
           fetch(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${word}?key=${APIKey}`)
             .then(response => response.json())
-            .then(wordInfo => this.word = wordInfo)      
+            .then(wordInfo => this.wordDetails = wordInfo)      
         }
       }
     },

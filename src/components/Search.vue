@@ -2,8 +2,8 @@
   <section id='search-container'>
     <h1 class='app-name'>1 - 2 - Many</h1>
     <form>
-      <input class='search-input' placeholder='Find a synonym for...' />
-      <button class='search-btn' v-on:click="updateWord">Search</button>
+      <input class='search-input' v-on:change='updateWord' placeholder='Find a synonym for...' />
+      <button class='search-btn' v-on:click="updateSearchedWord">Search</button>
     </form>
   </section>
 </template>
@@ -12,10 +12,18 @@
 
 export default {
   name: 'Search',
+  data: () => {
+    return {
+      word: ''
+    }
+  },
   methods: {
-    updateWord: function(e) {
+    updateSearchedWord: function(e) {
       e.preventDefault();
-      this.$emit('getWord', e.target.previousSibling.value)
+      this.$emit('getWord', this.word)
+    },
+    updateWord: function(e) {
+      this.word = e.target.value
     }
   }
 }

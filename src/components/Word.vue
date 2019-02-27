@@ -1,16 +1,16 @@
 <template>
   <section class='word-container'>
-    <h1 class='word-name'>{{word[0].meta.id}}</h1>
-    <p class='word-definition'>{{word[0].shortdef[0]}}</p>
-    <h2 class='synonyms-heading'>Synonyms for <span class='word'>{{word[0].meta.id}}</span></h2>
+    <h1 class='word-name'>{{wordDetails[0].meta.id}}</h1>
+    <p class='word-definition'>{{wordDetails[0].shortdef[0]}}</p>
+    <h2 class='synonyms-heading'>Synonyms for <span class='word'>{{wordDetails[0].meta.id}}</span></h2>
     <section class='synonym-container'>
       <Synonym />
       <Synonym />
       <Synonym />
       <Synonym />
     </section>
-    <h2 class='example-heading'>Example sentences for <span class='word'>{{word[0].meta.id}}</span></h2>
-    <p class='example-sentence'>{{word[0].def[0].sseq[0][0][1].dt[1][1][0].t.split('{it}').join('').split('{/it}').join()}}</p>
+    <h2 class='example-heading'>Example sentences for <span class='word'>{{wordDetails[0].meta.id}}</span></h2>
+    <p class='example-sentence'>{{wordDetails[0].def[0].sseq[0][0][1].dt[1][1][0].t.split('{it}').join('').split('{/it}').join()}}</p>
   </section>
 </template>
 
@@ -22,7 +22,7 @@
     components: {
       Synonym
     },
-    props: ['word'],
+    props: ['wordDetails'],
   }
 </script>
 
