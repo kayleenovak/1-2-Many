@@ -4,7 +4,7 @@
     <p class='word-definition'>{{wordDetails.definition}}</p>
     <h2 class='synonyms-heading'>Synonyms for <span class='word'>{{wordDetails.name}}</span></h2>
     <section class='synonym-container'>
-      <Synonym v-for="synonym in synonyms" v-bind:synonym='synonym'/>
+      <Synonym v-bind:synonym='synonym' v-on:updateWord='updateWord' v-for="synonym in synonyms"/>
     </section>
     <h2 class='example-heading'>Example sentences for <span class='word'>{{wordDetails.name}}</span></h2>
     <p class='example-sentence'>{{wordDetails.sentence}}</p>
@@ -20,10 +20,14 @@
       Synonym
     },
     props: ['wordDetails', 'synonyms'],
+    methods: {
+      updateWord: function(word) {
+        this.$emit('getWord', word)
+      }
+    }
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .word-container {
     text-align: left;

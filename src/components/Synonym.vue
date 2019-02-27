@@ -1,5 +1,5 @@
 <template>
-  <section class='synonym'>
+  <section v-on:click='clickSynonym'class='synonym'>
     <h4>{{synonym}}</h4>
   </section>
 </template>
@@ -8,7 +8,14 @@
 
 export default {
   name: 'Synonym',
-  props: ['synonym']
+  props: ['synonym'],
+  methods: {
+    clickSynonym: function(e) {
+      const word = e.target.childNodes[0].textContent
+      console.log(word)
+      this.$emit('updateWord', word)
+    }
+  }
 }
 
 </script>
