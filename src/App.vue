@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Search v-on:getWord='getWord'/>
-    <Word v-if='wordDetails.name' v-bind:wordDetails='wordDetails' />
+    <Word v-if='wordDetails.name' v-bind:wordDetails='wordDetails' v-bind:synonyms='synonyms' />
     <h2 v-else>Please search for a word</h2>
   </div>
 </template>
@@ -39,6 +39,7 @@
         this.wordDetails.name = wordInfo[0].meta.id
         this.wordDetails.definition = wordInfo[0].shortdef[0]
         this.wordDetails.sentence = wordInfo[0].def[0].sseq[0][0][1].dt[1][1][0].t.split('{it}').join('').split('{/it}').join()
+        this.synonyms = wordInfo[0].def[0].sseq[0][0][1].syn_list[0].map(word => word.wd)
       }
     },
     beforeMount() {

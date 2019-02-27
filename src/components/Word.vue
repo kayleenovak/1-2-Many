@@ -4,7 +4,7 @@
     <p class='word-definition'>{{wordDetails.definition}}</p>
     <h2 class='synonyms-heading'>Synonyms for <span class='word'>{{wordDetails.name}}</span></h2>
     <section class='synonym-container'>
-      <Synonym v:for="synonym"/>
+      <Synonym v-for="synonym in synonyms" v-bind:synonym='synonym'/>
     </section>
     <h2 class='example-heading'>Example sentences for <span class='word'>{{wordDetails.name}}</span></h2>
     <p class='example-sentence'>{{wordDetails.sentence}}</p>

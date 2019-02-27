@@ -1,13 +1,14 @@
 <template>
   <section class='synonym'>
-    <h4>synonym</h4>
+    <h4>{{synonym}}</h4>
   </section>
 </template>
 
 <script>
 
 export default {
-  name: 'Synonym'
+  name: 'Synonym',
+  props: ['synonym']
 }
 
 </script>
