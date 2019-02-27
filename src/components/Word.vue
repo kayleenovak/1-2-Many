@@ -53,6 +53,7 @@
   .synonym-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-right: 40px;
   }
 
   .word {
