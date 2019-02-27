@@ -30,5 +30,13 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px gray;
+  }
+
+  .synonym:hover {
+    background-color: #004E72;
+    border: 4px solid #D1F5FF;
+    color: white;
   }
 </style>

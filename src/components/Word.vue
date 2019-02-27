@@ -6,7 +6,7 @@
     <section class='synonym-container'>
       <Synonym v-bind:synonym='synonym' v-on:updateWord='updateWord' v-for="synonym in synonyms"/>
     </section>
-    <h2 class='example-heading'>Example sentences for <span class='word'>{{wordDetails.name}}</span></h2>
+    <h2 class='example-heading'>Example sentence for <span class='word'>{{wordDetails.name}}</span></h2>
     <p class='example-sentence'>{{wordDetails.sentence}}</p>
   </section>
 </template>
